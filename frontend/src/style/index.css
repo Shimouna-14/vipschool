@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+textarea { resize: none; }
+
+header{transition: width 500ms ease-in-out;}
+header:hover {
+  background-color: #5D84CB;
+  transition: width 500ms ease-in-out; 
+}
+
+header .show {
+  opacity: 0;
+  display: block;
+}
+header:hover .show {
+  opacity: 1;
+  font-size: 1.3em;
+  animation: show 1.8s ease forwards;
+}
+
+header .icon {margin-left: 100px;}
+#logout {margin-left: 115px;}
+header:hover .icon, header:hover #logout {
+  margin-left: 0;
+  animation: show 1.5s ease forwards;
+}
+@keyframes show {
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+
+@media (min-width: 710px) {
+  header + main { transition: padding 500ms ease-in-out; }
+  header:hover + main {
+    padding-left: 6em;
+    transition: padding 500ms ease-in-out;
+  }
+}
+
+.boxshadow {box-shadow: 0px 2px 4px 0px rgba(172, 172, 172, 0.35);}
+.shadow-aside {box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.25);}
+
+#button-announcement { 
+  background-color: #a4c7e7;
+  transition: background-color 100ms ease-in-out;
+}
+#button-announcement:hover { 
+  background-color: #6476b1;
+  transition: background-color 200ms ease-in-out;
+}
+
+.button-params {
+  background-color: #fcfbf9;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: background-color 100ms ease-in-out;
+}
+
+.button-params:hover {
+  background-color: #f3f3f3;
+  transition: background-color 100ms ease-in-out;
+}
+
+/* Calendar */
+.css-1lkpf4l-MuiYearCalendar-root { width: 272px!important; }
